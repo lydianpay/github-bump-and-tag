@@ -9,6 +9,7 @@ setOutput() {
 
 # https://nvd.nist.gov/vuln/detail/cve-2022-24765
 git config --global --add safe.directory /github/workspace
+git config --global url."https://x-access-token:${INPUT_TOKEN}@github.com/".insteadOf "https://github.com/"
 
 echo "Fetching Tags"
 git fetch --tags --recurse-submodules=no
