@@ -1,10 +1,14 @@
 name: 'Github Bump and Tag'
-description: 'Github action to bump the patch version and tag'
+description: 'Github action to bump a SemVer version number and tag'
 author: 'Lydian'
 inputs:
   token:
     description: 'GitHub token for pushing tags'
     required: true
+  bump:
+    description: 'Version segment to bump: major, minor, or patch'
+    required: false
+    default: 'patch'
 runs:
   using: 'docker'
   image: Dockerfile
